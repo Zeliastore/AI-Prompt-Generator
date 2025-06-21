@@ -271,6 +271,10 @@
                     <div class="checkbox-item">
                         <input type="checkbox" id="style-minimalis" name="style">
                         <label for="style-minimalis">Minimalis Modern</label>
+                <div class="checkbox-group">       
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-trendy" name="style">
+                        <label for="style-trendy">Trendy Modern</label>                        
                     </div>
                     <div class="checkbox-item">
                         <input type="checkbox" id="style-futuristik" name="style">
@@ -307,14 +311,14 @@
                     <option value="Peralatan Rumah Tangga">Peralatan Rumah Tangga</option>
                     <option value="Otomotif">Otomotif</option>
                     <option value="Hobi & Koleksi">Hobi & Koleksi</option>
-                    <option value="Makanan & Minuman">Makanan & Minuman</option>
+                    <option value="Makanan & Minuman">Produk Lainnya</option>
                 </select>
                 
                 <label for="product-desc">Deskripsi Produk:</label>
                 <textarea id="product-desc" placeholder="Contoh: SmartWatch Pro-X adalah jam tangan pintar generasi terbaru dengan baterai tahan 7 hari, monitor kesehatan 24/7, dan desain tahan air hingga 50m. Cocok untuk gaya hidup aktif modern."></textarea>
                 
                 <label for="product-price">Harga Produk:</label>
-                <input type="text" id="product-price" placeholder="Contoh: Rp 1.299.000 (Harga Normal Rp 2.500.000)">
+                <input type="text" id="product-price" placeholder="Contoh: Rp 299.000 (Harga Normal Rp 500.000)">
             </div>
             
             <div class="form-section">
@@ -353,7 +357,7 @@
                 </div>
                 
                 <label for="discount">Diskon:</label>
-                <input type="text" id="discount" placeholder="Contoh: Diskon 57% atau Rp 1.201.000">
+                <input type="text" id="discount" placeholder="Contoh: Diskon 49% atau Rp 201.000">
             </div>
             
             <div class="form-section">
@@ -534,7 +538,7 @@
             const notes = document.getElementById('notes').value;
             
             // Build the prompt
-            let prompt = `# 🚀 AI Prompt Generator untuk Landing Page\n\n`;
+            let prompt = `# 🚀 Buatkan webiste dari prompt dibawah ini\n\n`;
             prompt += `## 🌟 Tagline\n`;
             prompt += `"Buat Landing Page Konversi Tinggi yang Memukau dalam Hitungan Detik!"\n\n`;
             
