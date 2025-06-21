@@ -219,21 +219,6 @@
             margin-top: 20px;
         }
         
-        .redirect-message {
-            display: none;
-            background-color: #e8f5e9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 15px;
-            text-align: center;
-            border-left: 5px solid #4caf50;
-        }
-        
-        .redirect-btn {
-            background-color: #2196f3;
-            margin-top: 10px;
-        }
-        
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -275,33 +260,209 @@
         <div class="form-container">
             <h2>📋 Template Prompt Generator</h2>
             
-            <!-- [Form sections remain exactly the same as previous code] -->
-            <!-- Untuk menghemat ruang, saya tidak menulis ulang semua bagian form -->
-            <!-- Silakan gunakan bagian form yang sama persis dari kode sebelumnya -->
-            
             <div class="form-section">
                 <h3>A. Informasi Produk Dasar</h3>
-                <!-- ... (sama seperti sebelumnya) ... -->
+                
+                <label for="product-name">Nama Produk:</label>
+                <input type="text" id="product-name" placeholder="Contoh: SmartWatch Pro-X">
+                
+                <label>Style Tampilan:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-minimalis" name="style">
+                        <label for="style-minimalis">Minimalis Modern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-futuristik" name="style">
+                        <label for="style-futuristik">Futuristik</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-vintage" name="style">
+                        <label for="style-vintage">Vintage Retro</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-luxury" name="style">
+                        <label for="style-luxury">Elegant Luxury</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-fun" name="style">
+                        <label for="style-fun">Fun & Colorful</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-industrial" name="style">
+                        <label for="style-industrial">Industrial</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="style-nature" name="style">
+                        <label for="style-nature">Nature-Inspired</label>
+                    </div>
+                </div>
+                
+                <label for="product-category">Kategori Produk:</label>
+                <select id="product-category">
+                    <option value="">Pilih Kategori</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Fashion">Fashion</option>
+                    <option value="Kesehatan & Kecantikan">Kesehatan & Kecantikan</option>
+                    <option value="Peralatan Rumah Tangga">Peralatan Rumah Tangga</option>
+                    <option value="Otomotif">Otomotif</option>
+                    <option value="Hobi & Koleksi">Hobi & Koleksi</option>
+                    <option value="Makanan & Minuman">Makanan & Minuman</option>
+                </select>
+                
+                <label for="product-desc">Deskripsi Produk:</label>
+                <textarea id="product-desc" placeholder="Contoh: SmartWatch Pro-X adalah jam tangan pintar generasi terbaru dengan baterai tahan 7 hari, monitor kesehatan 24/7, dan desain tahan air hingga 50m. Cocok untuk gaya hidup aktif modern."></textarea>
+                
+                <label for="product-price">Harga Produk:</label>
+                <input type="text" id="product-price" placeholder="Contoh: Rp 1.299.000 (Harga Normal Rp 2.500.000)">
             </div>
             
-            <!-- ... (semua bagian form lainnya sama seperti sebelumnya) ... -->
+            <div class="form-section">
+                <h3>B. Desain & Tampilan</h3>
+                
+                <label>Skema Warna:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-monochrome" name="color">
+                        <label for="color-monochrome">Monokrom Hitam-Putih</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-pastel" name="color">
+                        <label for="color-pastel">Pastel Soft</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-bold" name="color">
+                        <label for="color-bold">Bold & Bright</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-earth" name="color">
+                        <label for="color-earth">Earth Tone</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-gradient" name="color">
+                        <label for="color-gradient">Gradient Modern</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-neon" name="color">
+                        <label for="color-neon">Neon Vibes</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="color-classic" name="color">
+                        <label for="color-classic">Classic Blue & Gold</label>
+                    </div>
+                </div>
+                
+                <label for="discount">Diskon:</label>
+                <input type="text" id="discount" placeholder="Contoh: Diskon 57% atau Rp 1.201.000">
+            </div>
+            
+            <div class="form-section">
+                <h3>C. Link & Kontak</h3>
+                
+                <label for="order-link">Link Order:</label>
+                <input type="text" id="order-link" placeholder="Contoh: https://order.smartwatchprox.com">
+                
+                <label for="raw-link">Link Mentahan/Link Luar:</label>
+                <input type="text" id="raw-link" placeholder="Opsional">
+                
+                <label for="gallery-link">Link GIF Galeri Model:</label>
+                <input type="text" id="gallery-link" placeholder="Opsional, contoh: link1,link2,link3">
+            </div>
+            
+            <div class="form-section">
+                <h3>D. Fitur Landing Page (✓ Centang semua yang berlaku)</h3>
+                
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-testimoni">
+                        <label for="feature-testimoni">Testimoni Pelanggan</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-galeri">
+                        <label for="feature-galeri">Galeri Produk</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-fitur">
+                        <label for="feature-fitur">Fitur & Keunggulan</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-faq">
+                        <label for="feature-faq">FAQ (Tanya Jawab)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-timer">
+                        <label for="feature-timer">Timer Countdown</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-garansi">
+                        <label for="feature-garansi">Garansi & Jaminan</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-pengiriman">
+                        <label for="feature-pengiriman">Info Pengiriman</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-pembayaran">
+                        <label for="feature-pembayaran">Metode Pembayaran</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-social">
+                        <label for="feature-social">Social Media Links</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="feature-popup">
+                        <label for="feature-popup">Auto Pop-up</label>
+                    </div>
+                </div>
+                
+                <h4>Teknik Psikologi Marketing:</h4>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="psych-scarcity">
+                        <label for="psych-scarcity">Scarcity (Kelangkaan)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="psych-urgency">
+                        <label for="psych-urgency">Urgency (Kegentingan)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="psych-social">
+                        <label for="psych-social">Social Proof (Bukti Sosial)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="psych-authority">
+                        <label for="psych-authority">Authority (Otoritas)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="psych-reciprocity">
+                        <label for="psych-reciprocity">Reciprocity (Resiprositas)</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h3>E. Target & Positioning</h3>
+                
+                <label for="target-audience">Target Audience:</label>
+                <input type="text" id="target-audience" placeholder="Contoh: Pria dan wanita usia 18-35 tahun yang aktif dan peduli kesehatan">
+                
+                <label for="usp">Unique Selling Point:</label>
+                <input type="text" id="usp" placeholder="Contoh: Satu-satunya smartwatch dengan teknologi pemantau stres real-time">
+                
+                <label for="notes">Catatan Tambahan:</label>
+                <textarea id="notes" placeholder="Contoh: Sertakan video demo produk di atas fold"></textarea>
+            </div>
             
             <button class="btn btn-generate" id="generate-btn">🚀 Generate Prompt AI</button>
         </div>
         
         <div class="result-container" id="result-container">
             <h2>🚀 Prompt Generated Successfully!</h2>
-            <p>Salin prompt di bawah dan gunakan di DeepSeek Chat atau AI builder lainnya.</p>
+            <p>Salin prompt di bawah dan gunakan di Claude, ChatGPT, atau AI builder lainnya.</p>
             
             <div class="result-text" id="result-text"></div>
             
             <button class="btn copy-btn" id="copy-btn">📋 Salin Prompt</button>
-            
-            <div class="redirect-message" id="redirect-message">
-                <p>Prompt telah disalin ke clipboard Anda!</p>
-                <p>Klik tombol di bawah ini untuk langsung menggunakan prompt ini di DeepSeek Chat:</p>
-                <button class="btn redirect-btn" id="redirect-btn">💬 Buka DeepSeek Chat</button>
-            </div>
         </div>
         
         <section class="how-to-use">
@@ -309,7 +470,7 @@
             <ol>
                 <li>Isi semua bagian dengan informasi produk Anda</li>
                 <li>Salin seluruh teks termasuk formatnya</li>
-                <li>Tempelkan ke DeepSeek Chat atau AI tool pilihan Anda</li>
+                <li>Tempelkan ke AI tool pilihan Anda</li>
                 <li>Tambahkan instruksi spesifik jika perlu (misal: "Buat dalam format HTML" atau "Buat copywriting persuasif")</li>
                 <li>Generate dan sesuaikan hasil sesuai kebutuhan</li>
             </ol>
@@ -322,30 +483,135 @@
     
     <script>
         document.getElementById('generate-btn').addEventListener('click', function() {
-            // [Kode generate prompt sama seperti sebelumnya]
-            // Untuk menghemat ruang, saya tidak menulis ulang bagian ini
-            // Silakan gunakan kode generate yang sama dari sebelumnya
+            // Get all form values
+            const productName = document.getElementById('product-name').value;
+            
+            // Get selected styles
+            const styles = [];
+            document.querySelectorAll('input[name="style"]:checked').forEach(checkbox => {
+                styles.push(checkbox.nextElementSibling.textContent);
+            });
+            
+            // Get product category
+            const productCategory = document.getElementById('product-category').value;
+            const productDesc = document.getElementById('product-desc').value;
+            const productPrice = document.getElementById('product-price').value;
+            
+            // Get selected colors
+            const colors = [];
+            document.querySelectorAll('input[name="color"]:checked').forEach(checkbox => {
+                colors.push(checkbox.nextElementSibling.textContent);
+            });
+            
+            const discount = document.getElementById('discount').value;
+            const orderLink = document.getElementById('order-link').value;
+            const rawLink = document.getElementById('raw-link').value;
+            const galleryLink = document.getElementById('gallery-link').value;
+            
+            // Get selected features
+            const features = [];
+            if (document.getElementById('feature-testimoni').checked) features.push('Testimoni Pelanggan');
+            if (document.getElementById('feature-galeri').checked) features.push('Galeri Produk');
+            if (document.getElementById('feature-fitur').checked) features.push('Fitur & Keunggulan');
+            if (document.getElementById('feature-faq').checked) features.push('FAQ (Tanya Jawab)');
+            if (document.getElementById('feature-timer').checked) features.push('Timer Countdown');
+            if (document.getElementById('feature-garansi').checked) features.push('Garansi & Jaminan');
+            if (document.getElementById('feature-pengiriman').checked) features.push('Info Pengiriman');
+            if (document.getElementById('feature-pembayaran').checked) features.push('Metode Pembayaran');
+            if (document.getElementById('feature-social').checked) features.push('Social Media Links');
+            if (document.getElementById('feature-popup').checked) features.push('Auto Pop-up');
+            
+            // Get psychology techniques
+            const psych = [];
+            if (document.getElementById('psych-scarcity').checked) psych.push('Scarcity (Kelangkaan)');
+            if (document.getElementById('psych-urgency').checked) psych.push('Urgency (Kegentingan)');
+            if (document.getElementById('psych-social').checked) psych.push('Social Proof (Bukti Sosial)');
+            if (document.getElementById('psych-authority').checked) psych.push('Authority (Otoritas)');
+            if (document.getElementById('psych-reciprocity').checked) psych.push('Reciprocity (Resiprositas)');
+            
+            const targetAudience = document.getElementById('target-audience').value;
+            const usp = document.getElementById('usp').value;
+            const notes = document.getElementById('notes').value;
+            
+            // Build the prompt
+            let prompt = `# 🚀 AI Prompt Generator untuk Landing Page\n\n`;
+            prompt += `## 🌟 Tagline\n`;
+            prompt += `"Buat Landing Page Konversi Tinggi yang Memukau dalam Hitungan Detik!"\n\n`;
+            
+            prompt += `## 📋 Detail Produk\n\n`;
+            prompt += `### A. Informasi Produk Dasar\n`;
+            prompt += `**Nama Produk:** ${productName || '[Isi nama produk]'}\n\n`;
+            
+            prompt += `**Style Tampilan:**\n`;
+            if (styles.length > 0) {
+                prompt += `- ${styles.join('\n- ')}\n\n`;
+            } else {
+                prompt += `[Pilih style tampilan]\n\n`;
+            }
+            
+            prompt += `**Kategori Produk:** ${productCategory || '[Pilih kategori produk]'}\n\n`;
+            prompt += `**Deskripsi Produk:** ${productDesc || '[Isi deskripsi produk]'}\n\n`;
+            prompt += `**Harga Produk:** ${productPrice || '[Isi harga produk]'}\n\n`;
+            
+            prompt += `### B. Desain & Tampilan\n`;
+            prompt += `**Skema Warna:**\n`;
+            if (colors.length > 0) {
+                prompt += `- ${colors.join('\n- ')}\n\n`;
+            } else {
+                prompt += `[Pilih skema warna]\n\n`;
+            }
+            
+            prompt += `**Diskon:** ${discount || '[Isi detail diskon jika ada]'}\n\n`;
+            
+            prompt += `### C. Link & Kontak\n`;
+            prompt += `**Link Order:** ${orderLink || '[Isi link order]'}\n`;
+            prompt += `**Link Mentahan/Link Luar:** ${rawLink || '[Opsional]'}\n`;
+            prompt += `**Link GIF Galeri Model:** ${galleryLink || '[Opsional]'}\n\n`;
+            
+            prompt += `### D. Fitur Landing Page\n`;
+            if (features.length > 0) {
+                prompt += `✓ ${features.join('\n✓ ')}\n\n`;
+            } else {
+                prompt += `[Pilih fitur yang diperlukan]\n\n`;
+            }
+            
+            if (psych.length > 0) {
+                prompt += `**Teknik Psikologi Marketing:**\n`;
+                prompt += `- ${psych.join('\n- ')}\n\n`;
+            }
+            
+            prompt += `### E. Target & Positioning\n`;
+            prompt += `**Target Audience:** ${targetAudience || '[Isi target audience]'}\n`;
+            prompt += `**Unique Selling Point:** ${usp || '[Isi USP produk]'}\n`;
+            prompt += `**Catatan Tambahan:** ${notes || '[Opsional]'}\n\n`;
+            
+            prompt += `---\n\n`;
+            prompt += `🚀 **Prompt Generated Successfully!**\n`;
+            prompt += `Gunakan prompt ini di AI tool pilihan Anda untuk membuat landing page yang konversi tinggi.\n\n`;
+            prompt += `💡 **Tambahan Instruksi untuk AI:**\n`;
+            prompt += `- Buat landing page yang persuasif dengan teknik copywriting yang kuat\n`;
+            prompt += `- Gunakan struktur yang jelas dengan headline, subheadline, dan CTA yang menonjol\n`;
+            prompt += `- Optimalkan untuk konversi tinggi dengan elemen psikologi marketing\n`;
+            prompt += `- Sertakan visual yang menarik dan relevan dengan produk\n`;
+            
+            // Display the result
+            document.getElementById('result-text').textContent = prompt;
+            document.getElementById('result-container').style.display = 'block';
+            
+            // Scroll to result
+            document.getElementById('result-container').scrollIntoView({ behavior: 'smooth' });
         });
         
-        // Copy to clipboard function with redirect
+        // Copy to clipboard function
         document.getElementById('copy-btn').addEventListener('click', function() {
             const resultText = document.getElementById('result-text').textContent;
             navigator.clipboard.writeText(resultText).then(() => {
                 const originalText = this.textContent;
                 this.textContent = '✅ Tersalin!';
-                
-                // Show redirect message
-                document.getElementById('redirect-message').style.display = 'block';
-                
                 setTimeout(() => {
                     this.textContent = originalText;
                 }, 2000);
             });
-        });
-        
-        // Redirect to DeepSeek Chat
-        document.getElementById('redirect-btn').addEventListener('click', function() {
-            window.open('https://chat.deepseek.com/', '_blank');
         });
     </script>
 </body>
